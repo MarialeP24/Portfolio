@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Alejandra Pardini</strong> — <em>apardini@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Zoning and Housing Supply</h2>
+
+			<h3>Data set overview</h3>
+			<ol>
+				<p style="text-align: left; width: 100%;">This dataset examines zoning regulations and demographic patterns across municipalities in the Greater Boston region, focusing on the impact of single-family zoning on housing accessibility and socioeconomic disparities. The dataset includes zoning data, demographic breakdowns, income distribution, and household sizes, allowing for a comprehensive analysis of exclusionary zoning policies.
+					
+					<p style="text-align: left; width: 100%;">Comparing the dataset with U.S. Census data from 2010, I have identified that the total population count for the Greater Boston region is 4,552,402, whereas the dataset sums to 586,500. Additionally, some municipalities have a population count of 0, which appears to be a data entry issue. To correct this, the following assumptions were made:</p>
+					<p style="text-align: left; width: 100%;">•	Areas with 0 population in the dataset (Belmont
+						Burlington,
+						Chelsea,
+						Everett,
+						Framingham,
+						Lynn,
+						Sharon,
+						Somerville,
+						Sudbury & 
+						Waltham) were removed from visualizations to avoid misleading results.</p>
+					<p style="text-align: left; width: 100%;">•    Rather than applying an arbitrary multiplier, data analysis focuses on relative differences rather than absolute population figures.</p>
+					<p style="text-align: left; width: 100%;">•	When comparing population-related insights, percentages, and distributions were prioritized to normalize differences in scale.
+						The key attributes in the dataset include:</p>
+					
+						<p>Additionally, the income data in the dataset originates from 2014 so the number of households detailed there does not match the ones from 2010, meaning that economic conditions may have shifted since the time of data collection. These temporal differences should be considered when interpreting trends in income and population.</p>
+					</p>
+			</ol>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>Which municipalities have the most restrictive zoning policies based on the ratio of single-family housing to total housing?</li>
+				<p>In Exclusionary by Design, historical accounts show that certain suburbs deliberately expanded single-family zoning to shield themselves from demographic changes and higher-density developments. By pinpointing which places still carry the highest ratio of SF zoning today, we can examine whether these towns have maintained longstanding restrictive practices that limit housing diversity, effectively mirroring past policies even in a contemporary context.</p>
+				<li>How does the percentage of single-family zoning correlate with median household income?</li>
+				<p>Drawing on the insights from The Illegal City of Somerville, which highlights how local codes can deviate from real housing needs, a strong link between SF zoning and higher incomes might reveal a subtle mechanism of economic exclusion. While municipalities often frame single-family regulations as preserving “neighborhood character,” real-world evidence could indicate that these rules inadvertently (or intentionally) segregate communities by income, perpetuating wealth disparities initially rooted in older zoning strategies.</p>
+				<li>How does single-family zoning relate to racial demographics—do municipalities with more SF zoning have higher percentages of white residents?</li>
+				<p> Exclusionary by Design notes how large-lot mandates frequently served to deter non-white and lower-income households. Investigating whether places with intense single-family restrictions still host predominantly white populations can clarify if modern zoning quietly sustains racially homogeneous enclaves. Such findings would shed light on whether past exclusionary frameworks have simply evolved into a new guise—namely, the “race-neutral” language of protecting property values and local aesthetic traditions.</p>
+				
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="../Images /Imagen 1.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+					Single-Family vs. Multi-Family Housing
+				</figcaption>
+				<article style="text-align: left; width: 100%; max-width: 800px; margin: auto;">
+					<p>
+						This map displays each municipality in Greater Boston, color-coded by its percentage of single-family (SF) housing. Municipalities shaded in red have lower or zero SF zoning, while those shaded in blue feature a higher proportion of SF zoning. This creates an immediate visual sense of where single-family housing dominates and where non-single-family (NSF) options prevail.
+					</p>
+				
+					<p>
+						While bluer municipalities often embody more restrictive zoning environments, focusing on single-family homes, redder areas hint at greater housing diversity. Whether that diversity stems from a deliberate pro-development stance or from older housing stock is less clear without local ordinances or historical context. For deeper context, <em>“Exclusionary by Design”</em> describes how many towns historically enforced large-lot single-family zoning, aligning with the blue clusters in this map.
+					</p>
+				
+					<p>
+						In summary, this color-coded map visually underscores the stark variation in how municipalities allocate land to SF vs. NSF housing. Understanding the political or historical reasons behind each shade of red or blue can reveal further insights into how zoning fosters or restricts housing accessibility.
+					</p>
+				</article>
+				
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 2.png" alt="" 
+				style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				
+				<figcaption>
+					Household Density in Different Zoning Areas
+				</figcaption>
+				<article style="text-align: left; width: 100%; max-width: 800px; margin: auto;">
+					<p>
+						This map now includes an additional variable: <strong>Number of Households.</strong> Each municipality is represented by a dot, where color indicates whether the area is Single-Family (SF) or Non-Single-Family (NSF) zoning, and dot size reflects the total number of households in that zone.
+					</p>
+				
+					<ul style="text-align: left; padding-left: 20px;">
+						<li>
+							Many SF-zoned areas show smaller dots, suggesting fewer households overall. This finding aligns with broader research on lower-density development associated with single-family zoning. This type of zoning typically involves larger lot sizes, which inherently limit the number of households in a given area.
+						</li>
+						<li>
+							In contrast, NSF-zoned areas often appear with larger dots, indicating greater household counts.
+						</li>
+						<li>
+							Some municipalities display two dots—one representing their SF-zoned portion and another for NSF areas—revealing how one town can encompass both housing types.
+						</li>
+					</ul>
+				
+					<p>
+						At first glance, it may seem straightforward: SF zones = fewer households. However, this does not necessarily imply these places are less populous per square mile without also considering municipal land area. For instance, some SF zones might stretch across large tracts of land, while NSF zones might occupy smaller footprints, resulting in more households on less acreage.
+					</p>
+				</article>
+				
+				
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 3.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				
+				<figcaption style="text-align: left; width: 100%;">
+				Income Disparities in Single-Family Zones
+				</figcaption>
+				<p style="text-align: left; width: 100%;">In this chart, the Y-axis lists municipalities, and the X-axis denotes the percentage of each age group while Color categorizes housing type (Single-Family vs. Non Single-Family).</p>
+				<p style="text-align: left; width: 100%;">This visualization explores whether single-family (SF) or non-single-family (NSF) zoning significantly alters age composition across municipalities. Rather than relying on raw population counts, it normalizes the data by using percentages for each age bracket (Under 18, 18–64, Over 65). Despite assumptions that SF zones might heavily attract or exclude certain age groups, the results are relatively uniform. A minor exception is a small uptick in residents aged 65+ within NSF, possibly reflecting seniors seeking smaller living arrangements. This modest difference challenges the idea that SF housing is uniquely “family-oriented,” echoing discussions of local policy in Exclusionary by Design that question how real estate regulations might—or might not—shape age-based demographics.</p>
+				<p style="text-align: left; width: 100%;">In summary, comparing SF and NSF zones reveals only subtle variations in age. Market forces, individual choices, or intangible local amenities could be more decisive in guiding older or younger populations than zoning alone.</p>
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 4.png" alt=""style="max-width: 100%; height: auto; object-fit: contain; display: block;"/> 
+				<figcaption>
+					Age Distribution Across Housing Types
+				</figcaption>
+				<p style="text-align: left; width: 100%;">Here, the focus shifts to household size, distinguishing family vs. non-family configurations. On the horizontal axis, we see counts for different household sizes (e.g., 1-person, 2-person), and the color scheme separates SF from NSF. A compelling pattern emerges: 2-person family households predominate across both SF and NSF, suggesting a baseline preference for smaller family units. However, NSF shows a disproportionately large share of 1-person non-familyhouseholds, effectively matching its 2-person family count. This pattern implies multi-family developments cater more readily to singles, while SF, often on larger lots, tends to host families or couples.</p>
+				<p style="text-align: left; width: 100%;">From a historical standpoint, local zoning might have limited multi-family units in specific suburbs, inadvertently constraining smaller households from moving in. As noted in Exclusionary by Design, many towns justified lot-size minimums under the guise of “family preservation,” yet the data indicates single-person living thrives in NSF—possibly due to smaller, more affordable units being more feasible outside SF zones.</p>
+				<p style="text-align: left; width: 100%;">In summary, these household-size comparisons underscore that multi-family housing can be crucial for individuals seeking one-person units, while SF generally favors family structures—intentionally or not.</p>
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 5.png" alt=""style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+					Household Size and Zoning Policies
+				</figcaption>
+				<p style="text-align: left; width: 100%;">This scatter plot examines whether SF-zoning percentages correlate with median household income. Each municipality is plotted by % SF (X-axis), with color showing income (red for lower, green for higher) and point size representing number of households. To avoid conflating data, SF and NSF entries are separated for municipalities that contain both. The findings are stark: in SF scenarios, higher SF percentages align strongly with higher incomes, mirroring claims in Exclusionary by Design that local leaders historically saw SF as a mechanism to preserve property values and, by extension, exclusive community demographics. Conversely, NSF data lacks a coherent pattern, except in towns where SF dominates over 95% of the land.</p>
+				<p style="text-align: left; width: 100%;">In summary, this graphic reinforces a robust link between SF zoning and affluence, raising policy questions about whether SF expansions perpetuate socio-economic barriers or simply reflect historical land-use choices now deeply ingrained.</p>
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 6.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+					Household Size and Zoning Policies
+				</figcaption>
+				<p style="text-align: left; width: 100%;">Switching from municipality-level to race categories, this chart arranges major racial groups (Latino, Black, Asian, White) to observe how housing type intersects with income. Color once again encodes a red-green gradient for income brackets. Interestingly, each racial group living in SF often reports higher incomes than their counterparts in NSF, indicating that zoning might indirectly shape economic tiers within the same racial community. Although the total racial split might not differ dramatically between SF and NSF, the income gap within each group stands out. These results recall historical contexts described in Exclusionary by Design, which notes that strictly single-family neighborhoods became wealth preserves—affecting who could afford them, regardless of race.</p>
+				<p style="text-align: left; width: 100%;">In summary, even if pure racial percentages aren’t drastically divergent across housing types, income disparities within each group highlight how zoning can reinforce economic stratification, overshadowing a purely racial explanation</p>
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 7.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+				<p style="text-align: left; width: 100%;">Here, the data reverts to a municipality-based lens, charting percentage of different racial groups in SF vs. NSF. In many places, non-white populations find themselves more concentrated in NSF, though some towns remain majority-white across both housing types, suggesting overall low minority presence. The distribution resonates with suggestions that SF policies historically curtailed lower-income and often non-white households from certain suburbs, aligning with earlier references—yet local variation abounds.</p>
+				<p style="text-align: left; width: 100%;">In summary, while some municipalities do exhibit modest diversification in SF, the overall pattern of non-white residents favoring NSF is consistent with earlier observations that multi-family zones provide more varied (and often more affordable) options.</p>
+			</figure>
+
+			<figure>
+				<img src="../Images /Imagen 8.png" alt=""style="max-width: 100%; height: auto; object-fit: contain; display: block;"/> 
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+				<p style="text-align: left; width: 100%;">Finally, this map-based chart merges race and housing type geographically, distinguishing SF vs. NSF with color and using dot size for population magnitude. The geographical clustering reveals Latino and Black communities more strongly grouped where NSF is prevalent, while Asian and White populations are more likely to appear in SF localities or be more evenly spread out. Although Exclusionary by Design highlights historical policies that shaped suburban demographics, this contemporary layout implies such distributions endure, even when explicit race-based zoning is no longer in effect.</p>
+				<p style="text-align: left; width: 100%;">In summary, seeing these racial clusters layered over SF and NSF underscores how zoning stands at the intersection of demographic settlement patterns. Some areas remain predominantly white SF enclaves; others manifest higher diversity in multi-family areas—a pattern whose origins may lie decades in the past yet persist today.</p>
+			</figure>
+
+		
+
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>Taken together, the charts reveal a consistent theme: municipalities with higher proportions of single-family zoning tend to show higher median incomes, fewer total households (due to lower density), and a modestly greater share of white residents. By contrast, multi-family or non-single-family areas exhibit more varied household sizes—particularly single-person households—along with slightly broader racial diversity. Although differences in age are relatively small between these two housing types, the correlation between single-family exclusivity and higher incomes is pronounced, suggesting that zoning rules play a central role in shaping local demographics and economic barriers to entry.</p>
+		</section>
+	</main>
+</body>
+</html>
