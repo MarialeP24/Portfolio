@@ -69,4 +69,24 @@ if ("colorScheme" in localStorage) {
     select.value = localStorage.colorScheme;
 }
 
+// STEP 5 (OPTIONAL)
+// Note: This is an optional part of the lab! If you want to do it, uncomment the lines below and fill in the TODOs. Otherwise, leave the lines commented out.
+
+// TODO: Inside the /contact/index.html, remove the enctype and method attributes from the <form> element. Remove the "Email" label and input as well.
+
+// TODO: uncomment below to select the form element!
+// let form = document.querySelector("form");
+
+// form?.addEventListener("TODO: FILL IN EVENT WE ARE WAITING FOR", function (event) {
+//     event.preventDefault();
+//     let data = new FormData(form);
+
+    // let url = form.action + "?";
+    // for (let [name, value] of data) {
+	//     url += (name + "=" + value + "&")
+	//     console.log(name, value);
+    // }
+
+        // TODO: open url here!
+// })
 
