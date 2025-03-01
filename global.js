@@ -23,18 +23,14 @@ let nav = document.createElement("nav");
 document.body.prepend(nav);
 
 for (let p of pages) {
-    let url = p.url;
-
-    // Ensure that we don't prepend /Portfolio twice
-    if (!window.location.pathname.startsWith(repoName)) {
-        url = repoName + p.url;
-    }
+    let url = repoName + p.url; // Always prepend the repo name
 
 	let a = document.createElement("a");
     a.href = url;
     a.textContent = p.title;
 
-    if (a.host === location.host && a.pathname === location.pathname) {
+    // Highlight the current page link
+    if (location.pathname === url || location.pathname === url + "index.html") {
         a.classList.add("current");
     }
 
