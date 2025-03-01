@@ -12,7 +12,7 @@ function $$ (selector, context = document) {
 // }
 
 
-let repoName = "Portfolio"; // Change this to match your repo name
+let repoName = "/Portfolio"; // Change this to match your repo name
 
 let pages = [
 	{url: "/", title: "Home"},
@@ -24,11 +24,11 @@ let nav = document.createElement("nav");
 document.body.prepend(nav);
 
 for (let p of pages) {
-	let url = repoName + p.url; // Ensure URL starts correctly
-	
-    // Avoid double repo name if already in the URL
-    if (window.location.pathname.startsWith(repoName)) {
-        url = p.url; // Use the direct path
+    let url = repoName + p.url;
+
+    // Ensure we do not append the repo name multiple times
+    if (window.location.pathname.includes(repoName)) {
+        url = p.url; // Use direct path if already in repo scope
     }
 
 	let a = document.createElement("a");
