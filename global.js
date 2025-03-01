@@ -11,8 +11,7 @@ function $$ (selector, context = document) {
 // 	currentLink.classList.add("current");
 // }
 
-
-let repoName = "/Portfolio"; // Change this to match your repo name
+let repoName = "/Portfolio"; // Your GitHub Pages repo name
 
 let pages = [
 	{url: "/", title: "Home"},
@@ -24,11 +23,11 @@ let nav = document.createElement("nav");
 document.body.prepend(nav);
 
 for (let p of pages) {
-    let url = repoName + p.url;
+    let url = p.url;
 
-    // Ensure we do not append the repo name multiple times
-    if (window.location.pathname.includes(repoName)) {
-        url = p.url; // Use direct path if already in repo scope
+    // Ensure that we don't prepend /Portfolio twice
+    if (!window.location.pathname.startsWith(repoName)) {
+        url = repoName + p.url;
     }
 
 	let a = document.createElement("a");
