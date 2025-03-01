@@ -4,12 +4,20 @@ function $$ (selector, context = document) {
 	return Array.from(context.querySelectorAll(selector));
 }
 
+// step 2
+// let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname)
+
+// if (currentLink) { // or if (currentLink !== undefined)
+// 	currentLink.classList.add("current");
+// }
+
+
+let repoName = "/Portfolio"; // Your GitHub Pages repo name
+
 let pages = [
-	{url: "Portfolio/", title: "Home"},
-	{url: "Portfolio/projects/", title: "Projects"},
-    {url: "Portfolio/contact/", title: "Contact"},
-    {url: "https://github.com/MarialeP24", title: "GitHub"},
-	// add the rest of your pages here
+	{url: repoName + "/", title: "Home"},
+	{url: repoName + "/projects/", title: "Projects"},
+    {url: repoName + "/contact/", title: "Contact"},
 ];
 
 let nav = document.createElement("nav");
