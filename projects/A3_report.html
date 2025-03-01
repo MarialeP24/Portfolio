@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+			<p>
+			<strong>Alejandra Pardini</strong> — <em>apardini@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;" />
+			</figure>
+
+			<p>
+				Insights about the data/visualization:
+			</p>
+
+			<ul>
+				<li>The visualization effectively highlights that COVID-19 cases tend to spike around December and January each year. This pattern is likely due to increased travel, holiday gatherings, and seasonal factors.</li>
+				<li>The spiral format makes it easy to recognize the progression of time across multiple years while showing that the data is based on 7-day averages, helping smooth out daily fluctuations.</li>
+				<li>The use of a spiral instead of a linear timeline makes it visually intuitive to see recurring patterns, while the red shading provides a clear indication and contrast of case surges over time.</li>
+			</ul>
+
+			<p>
+				Design Critique:
+			</p>
+
+			<ul>
+				<li>I really like the spiral format because it makes it easier to compare the same months across years, highlighting recurring trends like the December/January spikes. This is a smart design choice, but the way the spiral expands over time makes it harder to compare different years directly, since each subsequent year occupies a larger portion of the visual space. </li>
+				<li>The legend is effective, and the 7-day average shading does a great job of emphasizing trends, but I would have liked to see some markers or breaks at peak points to make it easier to read the actual number of cases rather than just the general shape of the trend. </li>
+				<li>Additionally, the timeline structure takes a moment to grasp, as the labels for 2021 and 2022 blend into the red shading, whereas 2020 is much clearer. A slight adjustment in contrast or label placement could improve clarity. When I first saw the article, especially with the title “Here’s When We Expect Omicron to Peak,” I assumed the spiral was meant to directly answer that question, but the connection wasn’t immediately clear. I would have liked to see the graphic placed further down with a more descriptive headline and a clear data source. Since the article specifically discusses Omicron, it would have been useful to mark when Omicron emerged, perhaps with a different color or annotation, to provide better context.</li>
+			    <li>What’s interesting is that the article itself grapples with the ambiguity of how to interpret Omicron, debating whether the sheer volume of cases matters more than hospitalization rates and overall severity. However, the visualization only focuses on case numbers, reinforcing the idea of an overwhelming surge without offering additional context on hospitalization or severity. Since the article highlights how Omicron’s impact isn’t as straightforward as past waves, the graphic could have benefited from additional data layers—perhaps a secondary trend line or annotation for hospitalization rates—to align more closely with the article’s nuanced discussion. </li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+
+      <figure>
+		<img src="../Images /spiral.jpeg" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+		<figcaption>
+         REFINED ORIGINAL SPIRAL VISUALIZATION
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>Enhancements for Readability: I labeled the peaks of each category (new confirmed cases, new recoveries, and new deceased) to make numerical interpretation easier. This improves clarity and reduces the need for estimation, making key data points more explicit.</li>
+				<li>Improved Year Markers: I made the January dividing line bolder and placed a small circle at the start of each year, also repositioning the year labels. This makes it easier to track yearly transitions, but the expanding spiral still makes direct year-to-year comparisons difficult.</li>
+				<li>I added a marker for the WHO’s pandemic declaration to provide historical grounding. This helps connect global events to the data trends, though it does not address the difficulty of comparing precise case numbers.</li>
+			</ul>
+
+			<figure>
+				<img src="../Images /linechart.jpeg" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+          UNFOLDING THE SPIRAL INTO A LINE CHART
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>Straightened Timeline: I converted the spiral into a linear timeline to eliminate spatial distortion. This makes it easier to compare trends accurately across years, but it removes the ability to emphasize seasonal recurrence intuitively.</li>
+				<li>Y-Axis for Case Counts: A vertical axis now quantifies case numbers, improving numerical readability. This allows for precise comparisons, but the structure no longer visually emphasizes recurring patterns as the spiral did.</li>
+				<li>Clearer Peak Comparison: Peaks are more distinguishable and aligned, making Omicron’s impact easier to compare with previous waves. While this improves clarity, it may feel less engaging than the spiral and requires more effort to perceive cyclical patterns.</li>
+			</ul>
+
+			<figure>
+				<img src="../Images /segmented.jpeg" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+					Grid of Years vs. Months
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>Separation by Year: Instead of a continuous spiral, I split the visualization into three horizontal sections, one for each year. This structure makes it easier to compare specific months across years, though it loses the seamless flow of time from the spiral..</li>
+				<li>X-Axis as Months, Y-Axis as Years: Months remain in a timeline, but each row represents a different year. This keeps the intent of the original design while eliminating distortion, but it may require additional explanation for first-time viewers.</li>
+				
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+      
+			<figure>
+				<img src="../Images /Covid 19 chart.png" alt="" style="max-width: 100%; height: auto; object-fit: contain; display: block;"/>
+				<figcaption>
+				COVID-19 Trends in the U.S
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p style="text-align: left; width: 100%;">
+				In designing this visualization, I aimed to provide a clear, comparative view of COVID-19 case trends over time while addressing the interpretability issues present in the spiral graph. The primary objective was to improve readability and facilitate direct comparisons between different years without the distortion caused by expanding visual space. By structuring the data on a grid where the Y-axis represents months (providing a continuous, easily traceable timeline) and the X-axis represents different COVID-19 trends (new confirmed cases, new recoveries, and new deceased), the visualization ensures that time remains an intuitive reference point. However, this approach comes with the tradeoff that comparisons between months within the same year are not as straightforward as in the spiral format.
+			</p>
+
+			<p style="text-align: left; width: 100%;">
+				The inclusion of a label marking the WHO’s declaration of the pandemic establishes historical context, helping viewers understand how case trends evolved in response to global recognition and policy measures. Additionally, the use of a grid with a scale of 100K cases per horizontal division provides a quick estimation tool, enabling readers to grasp the magnitude of peaks and fluctuations at a glance. Marking the highest points for each category further reinforces the significance of major surges and downturns in the pandemic’s trajectory, especially since the trends vary significantly in scale. These labels are particularly useful for the "new deceased" category, which, due to the scale, appears as a much thinner line compared to the others. A final label indicating where the dataset ends serves as a clear marker of data completeness, ensuring no ambiguity about the visualization’s scope.
+			</p>
+			
+      <h3>Reflection</h3>
+
+	  <p style="text-align: left; width: 100%;"> 
+		The process of critique by redesign helped me identify several challenges in effectively communicating COVID-19 case trends, particularly in balancing clarity, context, and visual impact. One of my primary critiques of the original spiral visualization was that, while it effectively highlighted seasonal patterns and recurring surges, its expanding loops distorted year-over-year comparisons and made numerical estimates difficult. My redesign directly addresses these issues by using a structured grid with a consistent scale, ensuring that the number of cases can be more easily estimated and compared across years. The addition of a labeled timeline, along with key event markers such as the WHO’s pandemic declaration, helps establish a clearer historical context. Furthermore, labeling peak values for each trend provides important reference points that were missing in the original, allowing for a better understanding of the relative magnitude of different waves.
+	</p>
+
+	<p style="text-align: left; width: 100%;"> 
+		However, while the new design improves numerical readability and direct comparison, some tradeoffs remain. One key limitation is that the grid-based format does not emphasize seasonal recurrence as effectively as the spiral visualization, which naturally conveyed cyclical trends. Additionally, while I initially critiqued the original for its lack of contextual information on hospitalizations and case severity, my design does not fully resolve this issue. By contrasting new cases, recoveries, and deaths, the visualization allows for some inferences—for example, the fact that the largest spike in new confirmed cases does not proportionally match new deaths suggests lower fatality rates—but it does not explicitly incorporate hospitalization data, which would provide a fuller picture of COVID-19’s impact. While I improved label placement and contrast to avoid blending into the background (a critique of the original), the structured approach might lack some of the aesthetic engagement that made the spiral visualization visually striking. In the end, this redesign clarified some aspects of the data while making others less immediately apparent, showing how every design choice comes with its own set of compromises.
+	</p>
+
+		</section>
+	</main>
+</body>
+</html>
