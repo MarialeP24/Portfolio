@@ -12,40 +12,31 @@ function $$ (selector, context = document) {
 // }
 
 
-let repoName = "/Portfolio"; // Your GitHub Pages repo name
+let repoName = "Portfolio"; // Change this to match your repo name
 
 let pages = [
-	{url: repoName + "/", title: "Home"},
-	{url: repoName + "/projects/", title: "Projects"},
-    {url: repoName + "/contact/", title: "Contact"},
+	{url: "/", title: "Home"},
+	{url: "/projects/", title: "Projects"},
+    {url: "/contact/", title: "Contact"},
 ];
 
 let nav = document.createElement("nav");
 document.body.prepend(nav);
 
-const ARE_WE_HOME = document.documentElement.classList.contains("home");
-
-
 for (let p of pages) {
-	let url = p.url;
-	let title = p.title;
-
-    // Create correct relative link and add it to nav  
-    if (!ARE_WE_HOME && !url.startsWith("http")) {
-        url = "../" + url;
+	let url = repoName + p.url; // Ensure URL starts correctly
+	
+    // Avoid double repo name if already in the URL
+    if (window.location.pathname.startsWith(repoName)) {
+        url = p.url; // Use the direct path
     }
 
-    let a = document.createElement("a");
+	let a = document.createElement("a");
     a.href = url;
-    a.textContent = title;
-    
+    a.textContent = p.title;
 
     if (a.host === location.host && a.pathname === location.pathname) {
         a.classList.add("current");
-    }
-
-    if (a.host !== location.host) {
-        a.target = "_blank";
     }
 
     nav.append(a);
