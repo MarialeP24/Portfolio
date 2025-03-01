@@ -4,13 +4,12 @@ function $$ (selector, context = document) {
 	return Array.from(context.querySelectorAll(selector));
 }
 
-let base = "/Portfolio/"; // Ensure the repository name is included
-
 let pages = [
-    { url: base, title: "Home" },
-    { url: base + "projects/", title: "Projects" },
-    { url: base + "contact/", title: "Contact" },
-    { url: "https://github.com/MarialeP24", title: "GitHub" }
+	{url: "", title: "Home"},
+	{url: "projects/", title: "Projects"},
+    {url: "contact/", title: "Contact"},
+    {url: "https://github.com/MarialeP24", title: "GitHub"},
+	// add the rest of your pages here
 ];
 
 let nav = document.createElement("nav");
