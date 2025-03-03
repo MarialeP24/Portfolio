@@ -11,31 +11,69 @@ function $$ (selector, context = document) {
 // 	currentLink.classList.add("current");
 // }
 
-let repoName = "/Portfolio"; // Your GitHub Pages repo name
 
 let pages = [
-	{url: "/", title: "Home"},
-	{url: "/projects/", title: "Projects"},
-    {url: "/contact/", title: "Contact"},
+	{url: "", title: "Home"},
+	{url: "projects/", title: "Projects"},
+    {url: "contact/", title: "Contact"},
+    {url: "https://github.com/MarialeP24", title: "GitHub"},
 ];
-
 let nav = document.createElement("nav");
-document.body.prepend(nav);
+document.body.prepend(nav)
+
+const ARE_WE_HOME = document.documentElement.classList.contains("home")
+
 
 for (let p of pages) {
-    let url = repoName + p.url; // Always prepend the repo name
+	let url = p.url;
+	let title = p.title;
 
-	let a = document.createElement("a");
-    a.href = url;
-    a.textContent = p.title;
-
-    // Highlight the current page link
-    if (location.pathname === url || location.pathname === url + "index.html") {
-        a.classList.add("current");
+    if (!ARE_WE_HOME && !url.startsWith("http")) {
+        url = "../" + url
     }
 
-    nav.append(a);
+	let a = document.createElement("a");
+
+a.href = url;
+a.textContent = title;
+
+if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add("current");
 }
+
+if (a.host !== location.host) {
+    a.target = "_blank";
+}
+
+nav.append(a)
+}
+
+
+// let repoName = "/Portfolio"; // Your GitHub Pages repo name
+
+// let pages = [
+// 	{url: "/", title: "Home"},
+// 	{url: "/projects/", title: "Projects"},
+//     {url: "/contact/", title: "Contact"},
+// ];
+
+// let nav = document.createElement("nav");
+// document.body.prepend(nav);
+
+// for (let p of pages) {
+//     let url = repoName + p.url; // Always prepend the repo name
+
+// 	let a = document.createElement("a");
+//     a.href = url;
+//     a.textContent = p.title;
+
+//     // Highlight the current page link
+//     if (location.pathname === url || location.pathname === url + "index.html") {
+//         a.classList.add("current");
+//     }
+
+//     nav.append(a);
+// }
 
 document.body.insertAdjacentHTML("afterbegin", `
 	<label class="color-scheme">
