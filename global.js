@@ -16,6 +16,7 @@ let pages = [
 	{url: "", title: "Home"},
 	{url: "projects/", title: "Projects"},
     {url: "contact/", title: "Contact"},
+    {url: "resume/", title: "Resume"},
     {url: "https://github.com/MarialeP24", title: "GitHub"},
 ];
 let nav = document.createElement("nav");
@@ -49,31 +50,6 @@ nav.append(a)
 }
 
 
-// let repoName = "/Portfolio"; // Your GitHub Pages repo name
-
-// let pages = [
-// 	{url: "/", title: "Home"},
-// 	{url: "/projects/", title: "Projects"},
-//     {url: "/contact/", title: "Contact"},
-// ];
-
-// let nav = document.createElement("nav");
-// document.body.prepend(nav);
-
-// for (let p of pages) {
-//     let url = repoName + p.url; // Always prepend the repo name
-
-// 	let a = document.createElement("a");
-//     a.href = url;
-//     a.textContent = p.title;
-
-//     // Highlight the current page link
-//     if (location.pathname === url || location.pathname === url + "index.html") {
-//         a.classList.add("current");
-//     }
-
-//     nav.append(a);
-// }
 
 document.body.insertAdjacentHTML("afterbegin", `
 	<label class="color-scheme">

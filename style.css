@@ -87,7 +87,7 @@ article{
       max-width: 50rem;
       margin: 2rem auto;
       padding: 2rem;
-      background: oklch(from var(--color-accent) 95% 5% h);
+      background: color-mix(in oklch, var(--color-accent), canvas 75%);
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);}
 
